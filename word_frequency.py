@@ -17,7 +17,7 @@ filtered_words = [word.lower() for word in words if word.lower() not in stop_wor
 # Count word frequency
 word_count = Counter(filtered_words)
 
-# Get the the top 15 most common words
+# Get the 15 most common words
 most_common_words = word_count.most_common(15)
 
 # Print the most common words
