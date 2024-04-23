@@ -4,14 +4,14 @@ from collections import Counter
 
 
 # Read the text file
-with open('paragraphs.txt', 'r', encoding='utf-8') as file:
+with open('paragraphs.txt', 'r') as file:
     text = file.read()
 
-# Tokenize the text into words
+# Word tokenization
 words = nltk.word_tokenize(text)
 symbols = ['.', ',', ';', ':', '!', '?', '-', '"', "'", '(', ')', '[', ']', '{', '}', '<', '>', '/', '\\', '|', '@', '#', '$', '%', '^', '&', '*', '_', "'s", "''","``"]
 
-# Remove stop words
+# Stop words removal
 stop_words = set(stopwords.words('english'))
 filtered_words = [word.lower() for word in words if word.lower() not in stop_words and word not in symbols]
 
